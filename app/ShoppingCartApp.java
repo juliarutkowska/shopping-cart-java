@@ -25,7 +25,7 @@ public class ShoppingCartApp {
         cart.applyPromotions(engine);
 
         // Wyświetl produkty
-        System.out.println("\nProdukty końcowe mają poprawne ceny po zniżkach (discountPrice):\n");
+        System.out.println("\nCeny produktów po zniżkach:\n");
 
         for (Product p : cart.getProducts()) {
             double regular = p.getPrice();
