@@ -18,7 +18,7 @@ public class DiscountOver300 implements Promotion {
 
     @Override
     public String getName() {
-        return "5% discount over 300 zł";
+        return "5% zniżki powyżej 300 zł";
     }
 }
 

@@ -20,7 +20,7 @@ public class FreeThirdCheapest implements Promotion {
 
     @Override
     public String getName() {
-        return "Free 3rd cheapest product";
+        return "Najtańszy z trzech za darmo";
     }
 }
 

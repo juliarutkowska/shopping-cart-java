@@ -22,7 +22,7 @@ public class Coupon30Percent implements Promotion {
 
     @Override
     public String getName() {
-        return "30% coupon for product: " + productCode;
+        return "30% zniżki na produkt: " + productCode;
     }
 }
 
