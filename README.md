@@ -1,56 +1,63 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/zlH1aRI5)
-# Zadanie: Koszyk Internetowy
+# Shopping Cart Simulation (Java CLI Project)
 
-| Termin oddania | Punkty     |
-|----------------|:-----------|
-| 18.05.2025  23:00   |  10        |
+This is a simple command-line shopping cart simulation built in Java as part of coursework at the Polish-Japanese Academy of Information Technology (PJATK). The project demonstrates core object-oriented programming (OOP) principles and includes basic inventory and order management logic.
 
---- 
-Przekroczenie terminu o **n** zajęć wiąże się z karą:
-- punkty uzyskania za realizację zadania są dzielone przez **2<sup>n</sup>**.
+## 🚀 Features
 
---- 
+- Add and remove products from a cart
+- Manage inventory using a `Magazyn` (warehouse) class
+- Track orders with a simple `Zamowienie` (order) system
+- Display available products and order summaries
+- Text-based user interface with input validation
 
-Twoja firma dostała zlecenie na stworzenie oprogramowania dla dużego sklepu internetowego *JavaMarkt*. 
-Jedną z podstawowych funkcjonalności jest oprogramowanie koszyka zakupów, 
-który potrafi uwzględniać różne promocje, rabaty oraz oferty specjalne, takie jak:
-- jeśli wartość zamówienia jest większa niż 300 zł klient otrzymuje 5% zniżki na zakupione towary
-- jeśli klient kupi 2 produkty to 3 najtańszy otrzymuje gratis
-- jeśli wartość zamówienia przekracza wartość 200 zł klient otrzymuje firmowy kubek gratis
-- jednorazowy kupon rabatowy 30% na wybrany produkt
-oraz wiele innych jeszcze nieznanych na tym etapie implementacji. 
-Promocje mogą się zmieniać w trakcie działania programu, tj. mogą się pojawiać nowe a istniejące mogą znikać.
+## 🛠️ Technologies
 
-Towary w koszyku powinny być posegregowane malejąco według ceny, 
-a potem według kolejności alfabetycznej nazw produktów. 
-Sposób sortowania może produktów może się zmieniać w trakcie działania programu. 
+- Java (standard libraries)
+- Command Line Interface (CLI)
 
-Twoim zadaniem jest zaimplementowanie logiki, operującej na obiektach typu ``Product``, 
-która umożliwiałaby:
-1. Wyszukiwanie najtańszego/najdroższego produktu w zadanej kolekcji produktów
-2. Wyszukiwanie n najtańszych/najdrożyszych produktów w zadanej kolekcji produktów
-3. Sortowanie kolekcji produktów po cenie jak i po nazwie
-4. Wyliczanie sumy cen wszystkich zadanych produktów
-6. Aplikowanie opisanych powyżej rodzajów promocji na zadanej kolekcji produktów w koszyku
-7. Umożliwiać dodawanie nowych promocji, o jeszcze nieznanych cechach, z zachowaniem zasad SOLID
-8. Proponować najkorzystniejszy sposób stosowania promocji; wynik zakupów może zależeć o doboru promocji i kolejności ich zastosowania.
+## 📁 Structure
 
-Cechy związane z klasą ``Product``:
-- kod produktu (code) - String
-- nazwa produktu (name) - String
-- cena produktu (price) – double
-- cena produktu po uwzględnieniu promocji (discountPrice) - double
+- `Produkt.java` – defines the product class
+- `Koszyk.java` – manages the shopping cart and its contents
+- `Magazyn.java` – handles the available product inventory
+- `Zamowienie.java` – represents a user's order
+- `Main.java` – main application logic and user interface
 
-W tym zadaniu użyj tablicy produktów jako kolekcji, na której będziesz operował.
+## 🎓 Context
 
----
+This project was created as part of first-year studies in Computer Science Engineering at PJATK Gdańsk. It focuses on clean class design, encapsulation, and simple business logic implementation.
 
-### Uwaga 1
-Projekt powinien zawierać odpowiednie testy jednostkowe do implementowanej funkcjonalności.
+## 📸 Preview
 
-### Uwaga 2
-Implementując koszyk i promocje zwróć uwagę na wzorzec projektowy [Command](https://www.oodesign.com/command-pattern.html).
+=== WELCOME TO THE SHOPPING SYSTEM ===
 
-### Uwaga 3
-Planując mechanizm sortowania zwróć uwagę na [Dependency Inversion Principle](https://www.oodesign.com/dependency-inversion-principle.html) oraz 
-interfejsy dostępne w Java: ``Comparable`` oraz ``Comparator``.
+Choose an option:
+1. Show products
+2. Add product to cart
+3. Remove product from cart
+4. View cart
+5. Confirm order
+6. Exit
+
+> 1
+
+Available products:
+1. Milk - 4.50 PLN
+2. Bread - 3.00 PLN
+3. Cheese - 8.99 PLN
+
+> 2
+
+Enter product ID: 1
+Enter quantity: 2
+
+Product added to cart.
+
+> 4
+
+Your cart:
+- Milk x2 - 9.00 PLN
+
+> 5
+
+Order confirmed. Thank you!
