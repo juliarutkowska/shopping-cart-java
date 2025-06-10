@@ -1,63 +1,47 @@
-# Shopping Cart Simulation (Java CLI Project)
+# JavaMarkt Shopping Cart (Java CLI Project)
 
-This is a simple command-line shopping cart simulation built in Java as part of coursework at the Polish-Japanese Academy of Information Technology (PJATK). The project demonstrates core object-oriented programming (OOP) principles and includes basic inventory and order management logic.
+This is a command-line shopping cart system developed in Java, designed for the JavaMarkt online store. The project demonstrates advanced object-oriented principles, design patterns, and implements complex promotion logic.
 
-## 🚀 Features
+🚀 **Features**
 
-- Add and remove products from a cart
-- Manage inventory using a `Magazyn` (warehouse) class
-- Track orders with a simple `Zamowienie` (order) system
-- Display available products and order summaries
-- Text-based user interface with input validation
+- Add and manage products in a shopping cart  
+- Apply various dynamic promotions and discounts:  
+  - 5% discount on orders over 300 PLN  
+  - Free third cheapest product when buying at least three items  
+  - Free branded mug for orders over 200 PLN  
+  - One-time 30% coupon for selected products  
+- Automatically find the optimal order of applying promotions for maximum savings  
+- Sort products by price or name dynamically  
+- Clean, extensible design using SOLID principles and Command pattern  
+- Unit tested with JUnit 5 for reliability
 
-## 🛠️ Technologies
+🛠️ **Technologies**
 
-- Java (standard libraries)
-- Command Line Interface (CLI)
+- Java 17 (standard libraries)  
+- Command Line Interface (CLI)  
+- JUnit 5 for unit testing
 
-## 📁 Structure
+🎓 **Context**
 
-- `Produkt.java` – defines the product class
-- `Koszyk.java` – manages the shopping cart and its contents
-- `Magazyn.java` – handles the available product inventory
-- `Zamowienie.java` – represents a user's order
-- `Main.java` – main application logic and user interface
+This project was developed as part of my learning journey in Java programming. It emphasizes clean code, design patterns like Command, and principles such as SOLID. The application simulates a realistic shopping cart with promotion logic, preparing me for enterprise-grade software development.
 
-## 🎓 Context
+📸 **Sample Output**
 
-This project was created as part of first-year studies in Computer Science Engineering at PJATK Gdańsk. It focuses on clean class design, encapsulation, and simple business logic implementation.
+Applied promotions in optimal order:
 
-## 📸 Preview
+5% discount over 300 PLN
 
-=== WELCOME TO THE SHOPPING SYSTEM ===
+Free third cheapest product
 
-Choose an option:
-1. Show products
-2. Add product to cart
-3. Remove product from cart
-4. View cart
-5. Confirm order
-6. Exit
+Free branded mug for orders over 200 PLN
 
-> 1
+30% coupon for product: Mouse
 
-Available products:
-1. Milk - 4.50 PLN
-2. Bread - 3.00 PLN
-3. Cheese - 8.99 PLN
+Final products with discounted prices:
 
-> 2
+Laptop: 2500.00 PLN → 2375.00 PLN (5% discount)
+Mouse: 100.00 PLN → 70.00 PLN (30% coupon)
+Mug: 25.00 PLN → 0.00 PLN (free mug)
+Keyboard: 200.00 PLN → 0.00 PLN (free third cheapest product)
 
-Enter product ID: 1
-Enter quantity: 2
 
-Product added to cart.
-
-> 4
-
-Your cart:
-- Milk x2 - 9.00 PLN
-
-> 5
-
-Order confirmed. Thank you!
